@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="702.0" prefWidth="1307.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentsController">
+    <children>
+        <TableView fx:id="appointmentTable" layoutX="389.0" layoutY="90.0" prefHeight="559.0" prefWidth="895.0">
+            <columns>                <TableColumn fx:id="apptIdCol" prefWidth="64.0" text="Appt. ID" />
+                <TableColumn fx:id="titleCol" prefWidth="86.0" text="Title" />
+                <TableColumn fx:id="descriptionCol" prefWidth="75.0" text="Description" />
+                <TableColumn fx:id="locationCol" prefWidth="67.0" text="Location" />
+                <TableColumn fx:id="contactCol" prefWidth="92.0" text="Contact" />
+                <TableColumn fx:id="typeCol" prefWidth="106.0" text="Type" />
+                <TableColumn fx:id="startDateTimeCol" prefWidth="137.0" text="Start" />
+                <TableColumn fx:id="endDateTimeCol" prefWidth="135.0" text="End " />
+                <TableColumn fx:id="customerIdCol" prefWidth="76.0" text="Customer ID" />
+                <TableColumn fx:id="UserIdCol" prefWidth="56.0" text="User ID" />
+            </columns>
+        </TableView>
+        <Button fx:id="backBtn" layoutX="1186.0" layoutY="657.0" mnemonicParsing="false" onAction="#backListener" prefHeight="35.0" prefWidth="98.0" text="Back" />
+        <Button fx:id="deleteBtn" layoutX="777.0" layoutY="653.0" mnemonicParsing="false" onAction="#deleteListener" prefHeight="43.0" prefWidth="191.0" text="Delete Appointment" />
+        <Button fx:id="updateBtn" layoutX="389.0" layoutY="653.0" mnemonicParsing="false" onAction="#updateListener" prefHeight="43.0" prefWidth="141.0" text="Update Appointment" />
+        <Button fx:id="addBtn" layoutX="562.0" layoutY="653.0" mnemonicParsing="false" onAction="#addListener" prefHeight="43.0" prefWidth="141.0" text="Add Appointment" />
+        <TextField fx:id="idField" editable="false" layoutX="161.0" layoutY="99.0" prefHeight="25.0" prefWidth="101.0" promptText="Auto-Generated">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="titleField" layoutX="161.0" layoutY="134.0" prefHeight="25.0" prefWidth="191.0" />
+        <TextField fx:id="locationField" layoutX="161.0" layoutY="265.0" prefHeight="25.0" prefWidth="191.0" />
+        <TextField fx:id="customerIdField" layoutX="115.0" layoutY="555.0" prefHeight="25.0" prefWidth="88.0" />
+        <TextField fx:id="endTimeField" layoutX="273.0" layoutY="512.0" prefHeight="25.0" prefWidth="88.0" />
+        <TextField fx:id="startTimeField" layoutX="115.0" layoutY="512.0" prefHeight="25.0" prefWidth="88.0" />
+        <TextField fx:id="typeField" layoutX="161.0" layoutY="349.0" prefHeight="25.0" prefWidth="191.0" />
+        <TextArea fx:id="descriptionArea" layoutX="161.0" layoutY="173.0" prefHeight="80.0" prefWidth="191.0" wrapText="true" />
+        <DatePicker fx:id="endDatePicker" editable="false" layoutX="115.0" layoutY="457.0" prefHeight="25.0" prefWidth="121.0" />
+        <DatePicker fx:id="startDatePicker" editable="false" layoutX="115.0" layoutY="419.0" prefHeight="25.0" prefWidth="121.0" />
+        <ComboBox fx:id="contactComboBox" layoutX="161.0" layoutY="308.0" prefHeight="25.0" prefWidth="191.0" />
+        <RadioButton fx:id="monthRadioBtn" layoutX="405.0" layoutY="40.0" mnemonicParsing="false" onAction="#sortByMonthListener" text="This Month" />
+        <RadioButton fx:id="weekRadioBtn" layoutX="405.0" layoutY="62.0" mnemonicParsing="false" onAction="#sortByWeekListener" text="This Week" />
+        <Text layoutX="41.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location:" />
+        <Text layoutX="46.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments">
+            <font>
+                <Font size="44.0" />
+            </font>
+        </Text>
+        <Text layoutX="37.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date:" />
+        <Text layoutX="41.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment ID:" />
+        <Text layoutX="41.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title:" />
+        <Text layoutX="41.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" />
+        <Text layoutX="41.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Name:" />
+        <Text layoutX="36.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time:" />
+        <Text layoutX="39.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date:" />
+        <Text layoutX="216.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Time:" />
+        <Text layoutX="32.0" layoutY="572.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID:" />
+        <Text layoutX="382.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter By:" wrappingWidth="51.62109375" />
+        <Text layoutX="41.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" />
+        <Button fx:id="clearBtn" layoutX="976.0" layoutY="40.0" mnemonicParsing="false" onAction="#clearSelectionListener" prefHeight="35.0" prefWidth="147.0" text="Clear" textAlignment="CENTER" />
+        <Button fx:id="reportBtn" layoutX="1143.0" layoutY="40.0" mnemonicParsing="false" onAction="#reportListener" prefHeight="35.0" prefWidth="141.0" text="Reports" />
+        <Text layoutX="510.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generate schedule report for:" wrappingWidth="156.62109375" />
+        <ComboBox fx:id="contactScheduleComboBox" layoutX="537.0" layoutY="58.0" onAction="#contactScheduleListener" prefHeight="25.0" prefWidth="191.0" />
+        <Text layoutX="537.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact:" wrappingWidth="156.62109375" />
+        <ComboBox fx:id="customerScheduleComboBox" layoutX="758.0" layoutY="58.0" onAction="#customerScheduleListener" prefHeight="25.0" prefWidth="191.0" />
+        <Text layoutX="758.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer:" wrappingWidth="156.62109375" />
+        <TextField fx:id="UserIdField" layoutX="273.0" layoutY="555.0" prefHeight="25.0" prefWidth="88.0" />
+        <Text layoutX="216.0" layoutY="572.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID:" />
+    </children>
+</AnchorPane>

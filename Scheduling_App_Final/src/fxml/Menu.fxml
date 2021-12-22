@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="231.0" layoutY="34.0" text="Menu" textAlignment="CENTER">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="alertLabel" alignment="TOP_LEFT" layoutX="274.0" layoutY="21.0" prefHeight="116.0" prefWidth="269.0" textFill="RED">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </Label>
+        <Button fx:id="viewCustomersBtn" layoutX="135.0" layoutY="149.0" mnemonicParsing="false" onAction="#viewCustomersHandler" prefHeight="72.0" prefWidth="295.0" text="Customer Records">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="viewApptsBtn" layoutX="135.0" layoutY="234.0" mnemonicParsing="false" onAction="#viewApptHandler" prefHeight="72.0" prefWidth="295.0" text="Appointments">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="logOutBtn" layoutX="353.0" layoutY="362.0" mnemonicParsing="false" onAction="#logoutHandler" prefHeight="30.0" prefWidth="90.0" text="Log Out" />
+        <Button fx:id="quitBtn" layoutX="453.0" layoutY="362.0" mnemonicParsing="false" onAction="#quitHandler" prefHeight="30.0" prefWidth="90.0" text="Quit" />
+    </children>
+</AnchorPane>

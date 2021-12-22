@@ -1,0 +1,6 @@
+
+2021/12/11 23:43:05 - Successful Login Attempt. Username: 'test'
+2021/12/11 23:52:14 - Failed Login Attempt. Username: 'test'
+2021/12/11 23:52:21 - Successful Login Attempt. Username: 'test'
+2021/12/11 23:52:50 - Successful Login Attempt. Username: 'test'
+2021/12/11 23:53:40 - Successful Login Attempt. Username: 'test'

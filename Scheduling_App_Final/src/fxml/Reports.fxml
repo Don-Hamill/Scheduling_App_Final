@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportController">
+    <children>
+        <ComboBox fx:id="typeComboBox" layoutX="150.0" layoutY="76.0" onAction="#typeListener" prefWidth="150.0" />
+        <ComboBox fx:id="monthComboBox" layoutX="150.0" layoutY="113.0" onAction="#monthListener" prefWidth="150.0" />
+        <Label layoutX="20.0" layoutY="27.0" text="Total customer appointments by type and month:">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="78.0" layoutY="80.0" text="Type:" />
+        <Label layoutX="78.0" layoutY="117.0" text="Month:" />
+        <Button fx:id="backButton" layoutX="34.0" layoutY="180.0" mnemonicParsing="false" onAction="#backListener" prefHeight="37.0" prefWidth="88.0" text="Back" />
+        <Label fx:id="numAppointmentsLabel" layoutX="404.0" layoutY="30.0" prefHeight="20.0" prefWidth="103.0">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
